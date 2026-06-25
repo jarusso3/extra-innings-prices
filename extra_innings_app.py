@@ -654,7 +654,7 @@ with col_right:
 
     display_df = pd.DataFrame(reach_rows)[["Inning", "P(Reached) %", "Fair ML"]].set_index("Inning")
     st.dataframe(
-        display_df.style.applymap(style_prob, subset=["P(Reached) %"]),
+        display_df.style.map(style_prob, subset=["P(Reached) %"]),
         use_container_width=True,
         height=320,
     )
